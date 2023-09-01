@@ -5,12 +5,12 @@ class Grupo:
 
     def __init__(self, grupo="grupo ordinado", asignaturas=None, estudiantes=None):
         self._grupo = grupo
+        if self._asignaturas == None:
+            self._asignaturas = []
         self._asignaturas = asignaturas
         self.listadoAlumnos = estudiantes
 
     def listadoAsignaturas(self, **kwargs):
-        if self._asignaturas == None:
-            self._asignaturas = []
         for x in kwargs.values():
             self._asignaturas.append(Asignatura(x))
 
